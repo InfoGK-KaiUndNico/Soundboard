@@ -1,3 +1,5 @@
+package soundboard;
+
 public class UserInterface extends javax.swing.JFrame {
 
     private static final long serialVersionUID = 1L;
@@ -18,13 +20,5 @@ public class UserInterface extends javax.swing.JFrame {
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 300, Short.MAX_VALUE));
 
         pack();
-    }
-
-    public static void main(String args[]) {
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new UserInterface().setVisible(true);
-            }
-        });
     }
 }
