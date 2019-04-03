@@ -2,17 +2,9 @@
     "configurations": [
         {
             "type": "java",
-            "name": "CodeLens (Launch) - UserInterface",
-            "request": "launch",
-            "mainClass": "UserInterface",
-            "projectName": "Soundboard_16effb45"
-        },
-        {
-            "type": "java",
             "name": "CodeLens (Launch) - Soundboard",
             "request": "launch",
-            "mainClass": "Soundboard",
-            "projectName": "Soundboard_16effb45"
+            "mainClass": "soundboard.Soundboard"
         }
     ]
 }
