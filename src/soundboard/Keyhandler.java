@@ -5,7 +5,7 @@ import java.awt.event.*;
 public class Keyhandler implements KeyListener {
 
     private void playkeyQ() {
-        //Verbindung zum SQL
+        // Verbindung zum SQL
         System.out.println("Hallo Welt!");
     }
 
@@ -16,12 +16,12 @@ public class Keyhandler implements KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
-        switch(e.getKeyCode()) {
-            case KeyEvent.VK_Q:
-                playkeyQ();
-                break;        
-            default:
-                break;
+        switch (e.getKeyCode()) {
+        case KeyEvent.VK_Q:
+            playkeyQ();
+            break;
+        default:
+            break;
         }
     }
 
