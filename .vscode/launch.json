@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Soundboard",
+            "request": "launch",
+            "mainClass": "soundboard.Soundboard"
+        }
+    ]
+}
