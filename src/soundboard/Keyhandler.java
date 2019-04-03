@@ -1,12 +1,13 @@
 package soundboard;
 
 import java.awt.event.*;
+import soundboard.Song;
 
 public class Keyhandler implements KeyListener {
 
     private void playkeyQ() {
-        //Verbindung zum SQL
-        System.out.println("Hallo Welt!");
+    song("Soundname")
+    System.out.println("Hallo Welt!");
     }
 
     @Override
