@@ -1,0 +1,26 @@
+package song;
+
+   import javax.sound.sampled.AudioInputStream;
+       import javax.sound.sampled.AudioSystem;
+        import javax.sound.sampled.Clip;
+
+
+public class Song {
+public void Abspielen() {
+
+ 
+           try{
+          AudioInputStream audioInputStream =AudioSystem.getAudioInputStream(this.getClass().getResource("Sounddatei"));
+         Clip clip = AudioSystem.getClip();
+         clip.open(audioInputStream);
+         clip.start( );
+        }
+       catch(Exception e){ 
+       
+       }
+}
+}
+
+//Wichtig ist, dass die Sounddatei im selben Ordner ist, wie die Java Class file.
+
+//Thomas
