@@ -5,7 +5,7 @@ import soundboard.Song;
 
 public class Keyhandler implements KeyListener{
 
-    private void playkeyQ() {
+    private void playkeyQ() {                        //Eigentlicher Befehl, der den Sound mit dem Key verbindet und dann abspielt
   Song soundQ = null;
         soundQ.Abspielen("soundboard/lib/Epic-Sax.wav");
 
@@ -19,7 +19,7 @@ public class Keyhandler implements KeyListener{
     }
 
     @Override
-    public void keyPressed(KeyEvent e) {
+    public void keyPressed(KeyEvent e) {         //Keypressed ist der Befehl die Taste zu drücken
         switch(e.getKeyCode()) {
             case KeyEvent.VK_Q:
                 playkeyQ();
