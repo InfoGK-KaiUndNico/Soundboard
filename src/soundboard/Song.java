@@ -1,6 +1,7 @@
-package soundbaord;
+package soundboard;
 
-   import javax.sound.sampled.AudioInputStream;
+   
+import javax.sound.sampled.AudioInputStream;
    import javax.sound.sampled.AudioSystem;
    import javax.sound.sampled.Clip;
 
@@ -10,7 +11,7 @@ public void Abspielen(String sound) {
 
  
    try {
-    AudioInputStream audioInputStream =AudioSystem.getAudioInputStream(this.getClass().getResource("soundboard/lib/"sound));
+    AudioInputStream audioInputStream =AudioSystem.getAudioInputStream(this.getClass().getResource(sound));
     Clip clip = AudioSystem.getClip();
     clip.open(audioInputStream);
     clip.start( );
@@ -21,9 +22,3 @@ public void Abspielen(String sound) {
        
        }
 }
-
-}
-
-//Wichtig ist, dass die Sounddatei im selben Ordner ist, wie die Java Class file.
-
-//Thomas
