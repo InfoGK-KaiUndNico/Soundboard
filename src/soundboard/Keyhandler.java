@@ -3,10 +3,13 @@ package soundboard;
 import java.awt.event.*;
 import soundboard.Song;
 
-public class Keyhandler implements KeyListener {
+public class Keyhandler implements KeyListener{
 
     private void playkeyQ() {
-    song("Soundname")
+  Song soundQ = null;
+        soundQ.Abspielen("soundboard/lib/Epic-Sax.wav");
+
+
     System.out.println("Hallo Welt!");
     }
 
