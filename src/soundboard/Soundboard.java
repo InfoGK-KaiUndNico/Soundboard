@@ -1,7 +1,5 @@
 package soundboard;
 
-import soundboard.*;
-
 public class Soundboard {
 
     public static void main(String[] args) {
