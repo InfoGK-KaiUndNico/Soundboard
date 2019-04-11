@@ -42,9 +42,9 @@ public class Keyhandler implements KeyListener {
         PressedKey = "S";
     }
 
-    private void playkeyW() {
+    private void playkeyWindows() {
         sound.Abspielen("lib/Windows-Microsoft.wav");
-        PressedKey = "W";
+        PressedKey = "Windows";
     }
 
     private void playkeyP() {
@@ -82,9 +82,9 @@ public class Keyhandler implements KeyListener {
         PressedKey = "G";
     }
 
-    private void playkeyD() {
+    private void playkeyW() {
         sound.Abspielen("lib/We-need-to-build-a-wall.wav");
-        PressedKey = "D";
+        PressedKey = "W";
     }
 
     private void playkeyX() {
@@ -145,7 +145,7 @@ public class Keyhandler implements KeyListener {
             case KeyEvent.VK_S:
                 playkeyS();
                 break;
-            case KeyEvent.VK_W:
+            case KeyEvent. VK_W:
                 playkeyW();
                 break;
             case KeyEvent.VK_P:
@@ -186,6 +186,9 @@ public class Keyhandler implements KeyListener {
                 break;
             case KeyEvent.VK_C:
                 playkeyC();
+                break;
+            case KeyEvent.VK_WINDOWS:
+                playkeyWindows();
                 break;
             default:
                 break;
