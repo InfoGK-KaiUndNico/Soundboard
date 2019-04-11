@@ -18,7 +18,7 @@ public class Keyhandler implements KeyListener {
     }
     
     private void playkeyD() {
-        sound.Abspielen();
+        sound.Abspielen("");
         PressedKey = "D";
     }
 
