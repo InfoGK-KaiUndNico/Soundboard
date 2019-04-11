@@ -22,6 +22,11 @@ public class Keyhandler implements KeyListener {
         PressedKey = "D";
     }
 
+    private void playkeyE() {
+        sound.Abspielen("lib/OneEternityLater.wav");
+        PressedKey = "E";
+    }
+
     private void playkeyA() {
         sound.Abspielen("lib/Hier_kommt_Alex.wav");
         PressedKey = "A";
@@ -35,6 +40,10 @@ public class Keyhandler implements KeyListener {
     private void playkeyL() {
         sound.Abspielen("lib/Langweilig.wav");
         PressedKey = "L";
+    }
+    private void playkeyM() {
+        sound.Abspielen("lib/meme.wav");
+        PressedKey = "M";
     }
 
     private void playkeyH() {
@@ -117,6 +126,21 @@ public class Keyhandler implements KeyListener {
         PressedKey = "C";
     }
 
+    private void playkeyF1() {
+        sound.Abspielen("lib/Help_me.wav");
+        PressedKey = "F1";
+    }
+
+    private void playkeyF2() {
+        sound.Abspielen("lib/bitconnect.wav");
+        PressedKey = "F2";
+    }
+
+    private void playkeyF3() {
+        sound.Abspielen("lib/IchWillNichtDassLädt.wav");
+        PressedKey = "F3";
+    }
+
     @Override
     public void keyTyped(KeyEvent e) {
 
@@ -143,6 +167,9 @@ public class Keyhandler implements KeyListener {
                 break;
             case KeyEvent.VK_L:
                 playkeyL();
+                break;
+            case KeyEvent.VK_M:
+                playkeyM();
                 break;
             case KeyEvent.VK_H:
                 playkeyH();
@@ -177,6 +204,9 @@ public class Keyhandler implements KeyListener {
             case KeyEvent.VK_D:
                 playkeyD();
                 break;
+            case KeyEvent.VK_E:
+                playkeyE();
+                break;
             case KeyEvent.VK_X:
                 playkeyX();
                 break;
@@ -194,6 +224,15 @@ public class Keyhandler implements KeyListener {
                 break;
             case KeyEvent.VK_WINDOWS:
                 playkeyWindows();
+                break;
+            case KeyEvent.VK_F1:
+                playkeyF1();
+                break;
+            case KeyEvent.VK_F2:
+                playkeyF2();
+                break;
+            case KeyEvent.VK_F3:
+                playkeyF3();
                 break;
             default:
                 break;
