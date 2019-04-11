@@ -16,6 +16,11 @@ public class Keyhandler implements KeyListener {
         sound.Abspielen("lib/Tsunami.wav");
         PressedKey = "T";
     }
+    
+    private void playkeyD() {
+        sound.Abspielen();
+        PressedKey = "D";
+    }
 
     private void playkeyA() {
         sound.Abspielen("lib/Hier_kommt_Alex.wav");
