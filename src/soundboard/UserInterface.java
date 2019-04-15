@@ -3,19 +3,18 @@ package soundboard;
 public class UserInterface extends javax.swing.JFrame {
 
     public UserInterface() {
-        DesktopPaneKeyF1 = new javax.swing.JDesktopPane();
         initComponents();
     }
 
     @SuppressWarnings("unchecked")
-    
+
     public void Highlight(String Key){
     if(Key.equalsIgnoreCase("F1")){
         DesktopPaneKeyF1.setBackground(new java.awt.Color(255, 100, 255));
         }
     System.out.println(Key);
     }
-     
+    
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
@@ -125,6 +124,8 @@ public class UserInterface extends javax.swing.JFrame {
         labelKeyC = new javax.swing.JLabel();
         DesktopPaneKeyV = new javax.swing.JDesktopPane();
         labelKeyV = new javax.swing.JLabel();
+        DesktopPaneKeyB = new javax.swing.JDesktopPane();
+        labelKeyB = new javax.swing.JLabel();
         DesktopPaneKeyN = new javax.swing.JDesktopPane();
         labelKeyN = new javax.swing.JLabel();
         DesktopPaneKeyM = new javax.swing.JDesktopPane();
@@ -1372,7 +1373,7 @@ public class UserInterface extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        labelKeyV.setText("B spielt \"Boring\"");
+        labelKeyV.setText("V spielt \"Sad Violin\"");
 
         DesktopPaneKeyV.setLayer(labelKeyV, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
@@ -1393,6 +1394,27 @@ public class UserInterface extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        labelKeyB.setText("B spielt \"Boring\"");
+
+        DesktopPaneKeyB.setLayer(labelKeyB, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        javax.swing.GroupLayout DesktopPaneKeyBLayout = new javax.swing.GroupLayout(DesktopPaneKeyB);
+        DesktopPaneKeyB.setLayout(DesktopPaneKeyBLayout);
+        DesktopPaneKeyBLayout.setHorizontalGroup(
+            DesktopPaneKeyBLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DesktopPaneKeyBLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(labelKeyB)
+                .addContainerGap())
+        );
+        DesktopPaneKeyBLayout.setVerticalGroup(
+            DesktopPaneKeyBLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DesktopPaneKeyBLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(labelKeyB)
+                .addContainerGap())
+        );
+
         labelKeyN.setText("N spielt \"Nein, nein, nein\"");
 
         DesktopPaneKeyN.setLayer(labelKeyN, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -1404,7 +1426,7 @@ public class UserInterface extends javax.swing.JFrame {
             .addGroup(DesktopPaneKeyNLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(labelKeyN)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         DesktopPaneKeyNLayout.setVerticalGroup(
             DesktopPaneKeyNLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1470,9 +1492,11 @@ public class UserInterface extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(DesktopPaneKeyC)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(DesktopPaneKeyV)
+                .addComponent(DesktopPaneKeyV, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(DesktopPaneKeyN)
+                .addComponent(DesktopPaneKeyB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(DesktopPaneKeyN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(DesktopPaneKeyM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -1483,6 +1507,9 @@ public class UserInterface extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(PanelKeyRow5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelKeyRow5Layout.createSequentialGroup()
+                        .addComponent(DesktopPaneKeyV, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelKeyRow5Layout.createSequentialGroup()
                         .addComponent(DesktopPaneKeyWindows, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(PanelKeyRow5Layout.createSequentialGroup()
@@ -1490,7 +1517,7 @@ public class UserInterface extends javax.swing.JFrame {
                             .addComponent(DesktopPaneKeyY)
                             .addComponent(DesktopPaneKeyX)
                             .addComponent(DesktopPaneKeyC)
-                            .addComponent(DesktopPaneKeyV)
+                            .addComponent(DesktopPaneKeyB)
                             .addComponent(DesktopPaneKeyN)
                             .addComponent(DesktopPaneKeyM))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
@@ -1550,6 +1577,7 @@ public class UserInterface extends javax.swing.JFrame {
     private javax.swing.JDesktopPane DesktopPaneKey8;
     private javax.swing.JDesktopPane DesktopPaneKey9;
     private javax.swing.JDesktopPane DesktopPaneKeyA;
+    private javax.swing.JDesktopPane DesktopPaneKeyB;
     private javax.swing.JDesktopPane DesktopPaneKeyC;
     private javax.swing.JDesktopPane DesktopPaneKeyD;
     private javax.swing.JDesktopPane DesktopPaneKeyE;
@@ -1611,6 +1639,7 @@ public class UserInterface extends javax.swing.JFrame {
     private javax.swing.JLabel labelKey8;
     private javax.swing.JLabel labelKey9;
     private javax.swing.JLabel labelKeyA;
+    private javax.swing.JLabel labelKeyB;
     private javax.swing.JLabel labelKeyC;
     private javax.swing.JLabel labelKeyD;
     private javax.swing.JLabel labelKeyE;
