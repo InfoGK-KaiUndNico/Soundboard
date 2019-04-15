@@ -4,148 +4,16 @@ import java.awt.event.*;
 
 public class Keyhandler implements KeyListener {
 
-    public String PressedKey = "none";               // Neuer Song wird angelegt
+    String PressedKey = "none";               // Neuer Song wird angelegt
     Song sound = new Song();
-
-    private void playkeyQ() {                        //Eigentlicher Befehl, der den Sound mit dem Key verbindet und dann abspielt
-        sound.Abspielen("lib/Epic-Sax.wav");
-        PressedKey = "Q";
+    UserInterface UI = new UserInterface();
+    public String getSong(){
+        return PressedKey;
     }
-
-    private void playkeyT() {
-        sound.Abspielen("lib/Tsunami.wav");
-        PressedKey = "T";
-    }
-    
-    private void playkeyD() {
-        sound.Abspielen("lib/Deutschland(Rammstein).wav");
-        PressedKey = "D";
-    }
-
-    private void playkeyE() {
-        sound.Abspielen("lib/OneEternityLater.wav");
-        PressedKey = "E";
-    }
-
-    private void playkeyA() {
-        sound.Abspielen("lib/Hier_kommt_Alex.wav");
-        PressedKey = "A";
-    }
-
-    private void playkeyB() {
-        sound.Abspielen("lib/Boring.wav");
-        PressedKey = "B";
-    }
-
-    private void playkeyL() {
-        sound.Abspielen("lib/Langweilig.wav");
-        PressedKey = "L";
-    }
-    private void playkeyM() {
-        sound.Abspielen("lib/meme.wav");
-        PressedKey = "M";
-    }
-
-    private void playkeyH() {
-        sound.Abspielen("lib/HAHA.wav");
-        PressedKey = "H";
-    }
-
-    private void playkeyS() {
-        sound.Abspielen("lib/Scream.wav");
-        PressedKey = "S";
-    }
-
-    private void playkeyWindows() {
-        sound.Abspielen("lib/Windows-Microsoft.wav");
-        PressedKey = "Windows";
-    }
-
-    private void playkeyP() {
-        sound.Abspielen("lib/SHALL_NOT_PASS.wav");
-        PressedKey = "P";
-    }
-
-    private void playkeyI() {
-        sound.Abspielen("lib/Illuminati_Confirmed.wav");
-        PressedKey = "I";
-    }
-
-    private void playkeyR() {
-        sound.Abspielen("lib/La-Le-Lu(Rammstein).wav");
-        PressedKey = "R";
-    }
-
-    private void playkeyV() {
-        sound.Abspielen("lib/Sad-Violin.wav");
-        PressedKey = "V";
-    }
-
-    private void playkeyN() {
-        sound.Abspielen("lib/Nein-Nein-Nein.wav");
-        PressedKey = "N";
-    }
-
-    private void playkeyY() {
-        sound.Abspielen("lib/YEET!.wav");
-        PressedKey = "Y";
-    }
-
-    private void playkeyG() {
-        sound.Abspielen("lib/Get-Some-Help.wav");
-        PressedKey = "G";
-    }
-
-    private void playkeyW() {
-        sound.Abspielen("lib/We-need-to-build-a-wall.wav");
-        PressedKey = "W";
-    }
-
-    private void playkeyX() {
-        sound.Abspielen("lib/Airhorn.wav");
-        PressedKey = "X";
-    }
-
-    private void playkeyJ() {
-        sound.Abspielen("lib/Jeopardy.wav");
-        PressedKey = "J";
-    }
-
-    private void playkeyO() {
-        sound.Abspielen("lib/No-God-please-no.wav");
-        PressedKey = "O";
-    }
-
-    private void playkeyF() {
-        sound.Abspielen("lib/For-the-damaged-coda.wav");
-        PressedKey = "F";
-    }
-
-    private void playkeyC() {
-        sound.Abspielen("lib/Curb-Your-Enthusiasm.wav");
-        PressedKey = "C";
-    }
-
-    private void playkeyF1() {
-        sound.Abspielen("lib/Help_me.wav");
-        PressedKey = "F1";
-    }
-
-    private void playkeyF2() {
-        sound.Abspielen("lib/bitconnect.wav");
-        PressedKey = "F2";
-    }
-
-    private void playkeyF3() {
-        sound.Abspielen("lib/IchWillNichtDassLädt.wav");
-        PressedKey = "F3";
-    }
-
-    @Override
+     @Override
     public void keyTyped(KeyEvent e) {
-
-    }
-
+    }  
+//Eigentlicher Befehl, der den Sound mit dem Key verbindet und dann abspielt
     @Override
     public void keyPressed(KeyEvent e) {            //Keypressed ist der Befehl die Taste zu drücken
         if (!PressedKey.equalsIgnoreCase("none")) {
@@ -153,90 +21,122 @@ public class Keyhandler implements KeyListener {
         }
 
         switch (e.getKeyCode()) {
-            case KeyEvent.VK_Q:
-                playkeyQ();
-                break;
-            case KeyEvent.VK_T:
-                playkeyT();
-                break;
             case KeyEvent.VK_A:
-                playkeyA();
+                sound.Abspielen("lib/Hier_kommt_Alex.wav");
+                PressedKey = "A";
                 break;
             case KeyEvent.VK_B:
-                playkeyB();
-                break;
-            case KeyEvent.VK_L:
-                playkeyL();
-                break;
-            case KeyEvent.VK_M:
-                playkeyM();
-                break;
-            case KeyEvent.VK_H:
-                playkeyH();
-                break;
-            case KeyEvent.VK_S:
-                playkeyS();
-                break;
-            case KeyEvent. VK_W:
-                playkeyW();
-                break;
-            case KeyEvent.VK_P:
-                playkeyP();
-                break;
-            case KeyEvent.VK_I:
-                playkeyI();
-                break;
-            case KeyEvent.VK_R:
-                playkeyR();
-                break;
-            case KeyEvent.VK_V:
-                playkeyV();
-                break;
-            case KeyEvent.VK_N:
-                playkeyN();
-                break;
-            case KeyEvent.VK_Y:
-                playkeyY();
-                break;
-            case KeyEvent.VK_G:
-                playkeyG();
-                break;
-            case KeyEvent.VK_D:
-                playkeyD();
-                break;
-            case KeyEvent.VK_E:
-                playkeyE();
-                break;
-            case KeyEvent.VK_X:
-                playkeyX();
-                break;
-            case KeyEvent.VK_J:
-                playkeyJ();
-                break;
-            case KeyEvent.VK_O:
-                playkeyO();
-                break;
-            case KeyEvent.VK_F:
-                playkeyF();
+                sound.Abspielen("lib/Boring.wav");
+                PressedKey = "B";
                 break;
             case KeyEvent.VK_C:
-                playkeyC();
+                sound.Abspielen("lib/Curb-Your-Enthusiasm.wav");
+                PressedKey = "C";
+                break;
+            case KeyEvent.VK_D:
+                sound.Abspielen("lib/Deutschland(Rammstein).wav");
+                PressedKey = "D";
+                break;
+            case KeyEvent.VK_E:
+                sound.Abspielen("lib/OneEternityLater.wav");
+                PressedKey = "E";
+                break;
+            case KeyEvent.VK_F:
+                sound.Abspielen("lib/For-the-damaged-coda.wav");
+                PressedKey = "F";
+                break;
+            case KeyEvent.VK_G:
+                sound.Abspielen("lib/Get-Some-Help.wav");
+                PressedKey = "G";
+                break;
+            case KeyEvent.VK_H:
+                sound.Abspielen("lib/HAHA.wav");
+                PressedKey = "H";
+                break;
+            case KeyEvent.VK_I:
+                sound.Abspielen("lib/Illuminati_Confirmed.wav");
+                PressedKey = "I";
+                break;
+            case KeyEvent.VK_J:
+                sound.Abspielen("lib/Jeopardy.wav");
+                PressedKey = "J";
+                break;
+            case KeyEvent.VK_L:
+                sound.Abspielen("lib/Langweilig.wav");
+                PressedKey = "L";
+                break;
+            case KeyEvent.VK_M:
+                sound.Abspielen("lib/meme.wav");
+                PressedKey = "M";
+                break;
+            case KeyEvent.VK_N:
+                sound.Abspielen("lib/Nein-Nein-Nein.wav");
+                PressedKey = "N";
+                break;
+            case KeyEvent.VK_O:
+                sound.Abspielen("lib/No-God-please-no.wav");
+                PressedKey = "O";
+                break;
+            case KeyEvent.VK_P:
+                sound.Abspielen("lib/SHALL_NOT_PASS.wav");
+                PressedKey = "P";
+                break;
+            case KeyEvent.VK_Q:
+                sound.Abspielen("lib/Epic-Sax.wav");
+                PressedKey = "Q";
+                break;
+            case KeyEvent.VK_R:
+                sound.Abspielen("lib/La-Le-Lu(Rammstein).wav");
+                PressedKey = "R";
+                break;                
+            case KeyEvent.VK_S:
+                sound.Abspielen("lib/Scream.wav");
+                PressedKey = "S";
+                break;
+            case KeyEvent.VK_T:
+                sound.Abspielen("lib/Tsunami.wav");
+                PressedKey = "T";
+                break;
+            case KeyEvent.VK_V:
+                sound.Abspielen("lib/Sad-Violin.wav");
+                PressedKey = "V";
+                break;
+            case KeyEvent. VK_W:
+                sound.Abspielen("lib/We-need-to-build-a-wall.wav");
+                PressedKey = "W";
+                break;
+            case KeyEvent.VK_Y:
+                sound.Abspielen("lib/YEET!.wav");
+                PressedKey = "Y";
+                break;
+            case KeyEvent.VK_X:
+                sound.Abspielen("lib/Airhorn.wav");
+                PressedKey = "X";
+                break;
+            case KeyEvent.VK_ESCAPE:
+                sound.Abspielen("lib/Fuck-This-Shit.wav");
+                PressedKey = "ESC";
                 break;
             case KeyEvent.VK_WINDOWS:
-                playkeyWindows();
+                sound.Abspielen("lib/Windows-Microsoft.wav");
+                PressedKey = "Windows";
                 break;
             case KeyEvent.VK_F1:
-                playkeyF1();
+                sound.Abspielen("lib/Help_Me.wav");
+                PressedKey = "F1";
                 break;
             case KeyEvent.VK_F2:
-                playkeyF2();
+                sound.Abspielen("lib/bitconnect.wav");
+                PressedKey = "F2";
                 break;
             case KeyEvent.VK_F3:
-                playkeyF3();
+                sound.Abspielen("lib/IchWillNichtDassLädt.wav");
+                PressedKey = "F3";
                 break;
             default:
                 break;
         }
+        UI.Highlight(PressedKey);
     }
 
     @Override
